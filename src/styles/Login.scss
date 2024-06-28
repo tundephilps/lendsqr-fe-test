@@ -1,0 +1,101 @@
+@import "./Variables.scss";
+
+.loginWrapper{
+
+    margin : 50px 50px;
+
+    .logo {
+        width :150px;
+    }
+
+    
+
+    .content {
+        display : flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top : 50px;
+
+        .signin {
+            width : 40%;
+        }
+
+
+        .container{
+            padding : 10px;
+            width : 300px;
+
+
+            .title {
+                color : $primary;
+                font-size : 22px;
+                margin-bottom : 10px
+            }
+
+            .intro {
+                margin-bottom : 40px;
+                color : $gray;
+                font-size : 12px;
+            }
+
+            .inputBox {
+                padding : 5px 10px;
+                margin : 10px 0;
+                border-radius : 10px;
+                border: 2px solid $divider;
+                display : flex;
+                justify-content: space-between;
+                align-items : center;
+            }
+    
+            input {
+                background-color: transparent;
+                width : 100%;
+                font-size : 14px;
+                padding : 5px;
+            }
+    
+            label {
+                font-size : 12px;
+                color : $secondary;
+                font-weight : 500;
+            }
+    
+            a {
+                display : block;
+                font-size : 10px;
+                margin : 30px 0;
+                cursor : pointer;
+                color : $secondary;
+            }
+    
+            button {
+                display : block;
+                width : 100%;
+                border-radius : 5px;
+                font-size : 12px;
+                padding : 10px;
+                background-color : $secondary;
+                color : #fff;
+                font-weight : 500;
+                cursor : pointer;
+            }
+
+            @media screen and (max-width : $mobileScreenWidth){
+                position : relative;
+                top : 0;
+                left : 50%;
+                transform : translate(-50%, 0)
+            }
+            
+        }
+        @media screen and (max-width : $mobileScreenWidth){
+            display : block;
+
+            .signin {
+                width : 100%;
+            }
+        }
+       
+    }
+}

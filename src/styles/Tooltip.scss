@@ -1,0 +1,40 @@
+@import "./Variables.scss";
+
+.tooltipWrapper {
+    position: absolute;
+    right : 70px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px $divider;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: none;
+    z-index: 1000;
+    width : 150px;
+
+    &.visible {
+        display: block;
+    }
+
+    button {
+        display : block;
+        color : $gray;
+        opacity : 0.7;
+        text-decoration: none;
+        padding : 10px;
+        font-weight : 500;
+        font-size : 14px;
+        cursor: pointer;
+        background : transparent;
+        width : 100%;
+        text-align: left;
+
+        .icon {
+            margin : 0 5px;
+        }
+
+        &:hover {
+            opacity : 0.7
+        }
+    }
+}

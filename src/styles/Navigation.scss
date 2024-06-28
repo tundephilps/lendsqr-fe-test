@@ -1,0 +1,15 @@
+@import "./Variables.scss";
+
+.navigationWrapper {
+
+    
+    .navigationContent{
+        display : flex;
+    }
+
+    @media screen and (max-width : $mobileScreenWidth){
+        .navigationContent{
+            display : block;
+        }
+    }
+}

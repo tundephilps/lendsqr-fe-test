@@ -1,0 +1,215 @@
+@import "./Variables.scss";
+
+.usersWrapper {
+    background : #eee;
+    flex : 1;
+    padding : 50px;
+
+    .pageTitle {
+        color : $primary;
+        font-size : 24px;
+        font-weight : 600;
+        margin-bottom: 20px;
+    }
+
+    .wrapper {
+        display : flex;
+        justify-content : space-between;
+        align-items: center;
+        gap : 10px;
+
+        .box {
+            padding : 20px;
+            background : #fff;
+            border-radius : 5px;
+            width : 190px;
+
+            .icon {
+                width : 18px;
+                height : 18px;
+                border-radius: 50%;
+                font-size: 5px;
+                padding : 10px;
+
+                &.pink {
+                    color : #DF18FF;
+                    background : rgba(223, 24, 255, .1);
+                }
+
+                &.purple {
+                    color : #5718FF;
+                    background : rgba(87, 24, 255, .1);
+                }
+
+                &.orange {
+                    color : #F55F44;
+                    background: rgba(245, 95, 68, .1);
+                }
+
+                &.red{
+                    color : #FF3366;
+                    background : rgba(255, 51, 102, .1);
+                }
+            }
+
+            .title {
+                font-weight : 500;
+                font-size : 14px;
+                color : $gray;
+                margin : 8px 0;
+                opacity : 0.7;
+            }
+
+            .label {
+                font-size : 24px;
+                font-weight : 600;
+                color : $primary
+            }
+
+            @media screen and (max-width : $mobileScreenWidth){
+                width : 100%;
+                margin : 10px 0;
+                box-sizing: border-box;
+
+            }
+        }
+
+        @media screen and (max-width : $mobileScreenWidth){
+            display : block;
+            box-sizing: border-box;
+        }
+    }
+
+    .table {
+        background : #fff;
+        margin-top : 50px;
+        border-radius: 5px;
+        padding : 20px;
+
+        table {
+            width : 100%;
+            text-align : left;
+
+            tr {
+                padding : 10px 0;
+                margin-bottom : 200px;
+
+            }
+
+            th {
+                color : $primary;
+                font-size : 12px;
+                font-weight: 600;
+
+                .icon {
+                    padding : 0 5px;
+                    cursor: pointer;
+                }
+            }
+
+            td {
+                color : $gray;
+                font-size: 14px;
+                opacity : 0.7;
+                padding : 15px 0;
+                border-bottom : 1px solid $divider;
+
+                .icon {
+                    cursor : pointer;
+                    padding : 5px;
+                }
+
+                .status {
+                    padding : 5px 10px;
+                    border-radius : 10px;
+
+                    &.status-active {
+                        color : #39CD62;
+                        background : rgba(57, 205, 98, .1);
+                    }
+    
+                    &.status-inactive {
+                        color : #545F7D;
+                        background : rgba(84, 95, 125, .1)
+                    }
+    
+                    &.status-pending {
+                        color : #E9B200;
+                        background : rgba(233, 178, 0, .1)
+                    }
+    
+                    &.status-blacklisted {
+                        color : #E4033B;
+                        background : rgba(228, 3, 59, .1)
+                    }
+                }
+            }
+        }
+        @media screen and (max-width : $mobileScreenWidth){
+            width : 100%;
+            overflow-x : auto;
+            box-sizing: border-box;
+        }
+    }
+
+    .paginationWrapper {
+        margin-top : 50px;
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content {
+            display : flex;
+            justify-content: space-between;
+            align-items: center;
+            gap : 20px;
+
+            p {
+                color : $gray;
+                opacity : 0.8;
+                font-size: 14px;
+            }
+
+            select {
+                color : $primary;
+                background : #213F7D1A;
+                width : 70px;
+                padding : 10px;
+                border-radius : 8px;
+                font-weight: 500;
+            }
+
+            .icon {
+                background : #213F7D1A;
+                color : $primary;
+                padding : 5px 10px;
+                font-size : 14px;
+                cursor : pointer;
+            }
+
+            .pageNum {
+                color : $gray;
+                opacity : 0.7;
+                font-size: 14px;
+                background : transparent;
+                cursor : pointer;
+
+                &.active {
+                    opacity : 1;
+                }
+            }
+
+            .dot {
+                background : transparent;
+            }
+        }
+
+        @media screen and (max-width : $mobileScreenWidth){
+            display : block;
+            
+        }
+    }
+    @media screen and (max-width : $mobileScreenWidth){
+       padding : 20px;
+    }
+}
